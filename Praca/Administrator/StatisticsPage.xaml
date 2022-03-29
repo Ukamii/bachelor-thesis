@@ -1,0 +1,30 @@
+﻿<Page x:Class="Praca.StatisticsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praca"
+      mc:Ignorable="d" 
+      d:DesignHeight="560" d:DesignWidth="690"
+      Title="StatisticsPage">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.452,1.962" StartPoint="1.164,-0.352">
+                <GradientStop Color="#FF202020" Offset="0"/>
+                <GradientStop Color="#FF545454" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="TimesRentedButton" Content="Times Rented" HorizontalAlignment="Left" Margin="80,190,0,0" VerticalAlignment="Top" Width="150" Height="60" Click="TimesRentedButton_Click" FontSize="16"/>
+        <Button x:Name="RequestWaitButton" HorizontalAlignment="Left" Margin="80,290,0,0" VerticalAlignment="Top" Width="150" Height="60" Click="RequestWaitButton_Click" FontSize="16">
+            <TextBlock Text="Avg request waiting time" TextWrapping="Wrap"/>
+        </Button>
+        <Button x:Name="TimesRequestedButton" Content="Times requested" HorizontalAlignment="Left" Margin="80,90,0,0" VerticalAlignment="Top" Width="150" Height="60" Click="TimesRequestedButton_Click" FontSize="16"/>
+        <Button x:Name="RentTimeButton" Content="Avg rent time" HorizontalAlignment="Left" Margin="80,390,0,0" VerticalAlignment="Top" Width="150" Height="60" Click="RentTimeButton_Click" FontSize="16"/>
+        <TextBlock Margin="295,10,0,0" TextWrapping="Wrap" Text="Statistics:" VerticalAlignment="Top" FontSize="22" Foreground="White" HorizontalAlignment="Left" Width="100"/>
+        <Label Content="How many times one type of product was requested" HorizontalAlignment="Left" Margin="260,100,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="How many times one type of product was rented" HorizontalAlignment="Left" Margin="260,200,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Average time before request is accepted or rejected" HorizontalAlignment="Left" Margin="260,300,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Average time of one type of product being rented" HorizontalAlignment="Left" Margin="260,400,0,0" VerticalAlignment="Top" FontSize="16"/>
+    </Grid>
+</Page>

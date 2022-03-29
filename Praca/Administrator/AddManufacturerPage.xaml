@@ -1,0 +1,46 @@
+﻿<Page x:Class="Praca.AddManufacturerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praca"
+      mc:Ignorable="d" 
+      d:DesignHeight="560" d:DesignWidth="690"
+      Title="AddManufacturer" Loaded="PageLoaded">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.452,1.962" StartPoint="1.164,-0.352">
+                <GradientStop Color="#FF202020" Offset="0"/>
+                <GradientStop Color="#FF545454" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="30" Margin="39,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <TextBox x:Name="ZipcodeTextBox" HorizontalAlignment="Left" Height="30" Margin="316,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <TextBox x:Name="AddressTextBox" HorizontalAlignment="Left" Height="30" Margin="39,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <TextBox x:Name="Address2TextBox" HorizontalAlignment="Left" Height="30" Margin="316,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <TextBox x:Name="PhonenumberTextBox" HorizontalAlignment="Left" Height="30" Margin="39,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <Button x:Name="AddNewManufacturerButton" Content="Accept" HorizontalAlignment="Left" Margin="530,490,0,0" VerticalAlignment="Top" Width="150" Click="AddNewManufacturerButton_Click" Height="60" FontSize="16"/>
+
+        <Label Content="Name" HorizontalAlignment="Left" Margin="33,12,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="33,212,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="2nd address" HorizontalAlignment="Left" Margin="311,212,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Country" HorizontalAlignment="Left" Margin="33,116,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Zip code" HorizontalAlignment="Left" Margin="311,116,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Phone number" HorizontalAlignment="Left" Margin="33,311,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="ReturnButton" Content="Return" HorizontalAlignment="Left" Margin="530,410,0,0" VerticalAlignment="Top" Width="150" Height="60" FontSize="16" Click="ReturnButton_Click"/>
+        <ComboBox x:Name="CountryComboBox" HorizontalAlignment="Left" Margin="39,146,0,0" VerticalAlignment="Top" Width="200" Height="30" IsEditable="True" StaysOpenOnEdit="True" FontSize="16" Style="{DynamicResource ComboBoxStyle1}" Foreground="White">
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="#FF0082E1"/>
+                    <Setter Property="BorderBrush" Value="#FF0082E1"/>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="30" Margin="39,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="33,410,0,0" VerticalAlignment="Top" Height="31" Width="114" FontSize="16"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,41 @@
+﻿<Window x:Class="Praca.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praca"
+        mc:Ignorable="d"
+        Title="Reminder" Height="600" Width="900" Loaded="WindowLoaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="700*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel>
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.452,1.962" StartPoint="1.164,-0.352">
+                    <GradientStop Color="#FF202020" Offset="0"/>
+                    <GradientStop Color="#FF545454" Offset="1"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+            <Button x:Name="LogoutButton" DockPanel.Dock="Bottom" Content="Log out" Click="LogoutButton_Click" FontSize="14" Height="40" Grid.Column="0"/>
+            <Label x:Name="NameLabel" DockPanel.Dock="Bottom" Content="" FontSize="14" Grid.Column="0"/>
+            <Label Content="Hello!" DockPanel.Dock="Bottom" FontSize="14" Grid.Column="0"/>
+            <StackPanel>
+                <Button x:Name="RentedListButton" Content="Rented products" Click="RentedListButton_Click" Height="80" FontSize="14" Grid.Column="0"/>
+                <Button x:Name="AskForRentButton" Content="Rental request" Click="AskForRentButton_Click" Height="80" FontSize="14" Grid.Column="0"/>
+                <Button x:Name="SentRequests" Content="Sent requests" Click="SentRequests_Click" Height="80" FontSize="14" Grid.Column="0"/>
+            </StackPanel>
+        </DockPanel>
+        
+        <Frame Grid.Column="1" x:Name="ShowingFrame" NavigationUIVisibility="Hidden">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0.452,1.962" StartPoint="1.164,-0.352">
+                    <GradientStop Color="#FF202020" Offset="0"/>
+                    <GradientStop Color="#FF545454" Offset="1"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+    </Grid>
+</Window>

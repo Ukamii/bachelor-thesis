@@ -1,0 +1,38 @@
+﻿<Page x:Class="Praca.AddCopyOfProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praca"
+      mc:Ignorable="d" 
+      d:DesignHeight="560" d:DesignWidth="690"
+      Title="AddCopyOfProduct" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.452,1.962" StartPoint="1.164,-0.352">
+                <GradientStop Color="#FF202020" Offset="0"/>
+                <GradientStop Color="#FF545454" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <ComboBox x:Name="ExistingProducts" HorizontalAlignment="Left" Margin="109,85,0,0" VerticalAlignment="Top" Width="210" Height="30" SelectionChanged="ExistingProducts_SelectionChanged" FontSize="16" Style="{DynamicResource ComboBoxStyle1}">
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="#FF0082E1"/>
+                    <Setter Property="BorderBrush" Value="#FF0082E1"/>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+        <Label Content="Choose existing product:" HorizontalAlignment="Left" Margin="103,47,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <DatePicker x:Name="LicenseWarrantyDate" HorizontalAlignment="Left" Margin="411,268,0,0" VerticalAlignment="Top" Height="30" Width="145" FontSize="16"/>
+        <Label x:Name="LicenseWarrantyLabel" Content="Label" HorizontalAlignment="Left" Margin="406,232,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="SerialNumbers" HorizontalAlignment="Left" Height="280" Margin="109,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" AcceptsReturn="True" FontSize="16"/>
+        <TextBox x:Name="AmountOfCopies" HorizontalAlignment="Left" Height="30" Margin="411,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="16" GotFocus="AmountOfCopies_GotFocus"/>
+        <Button x:Name="AddCopyButton" Content="Add products" HorizontalAlignment="Left" Margin="530,490,0,0" VerticalAlignment="Top" Width="150" FontSize="16" Height="60" Click="AddCopyButton_Click"/>
+        <Button x:Name="ReturnButton" Content="Return" HorizontalAlignment="Left" Margin="530,410,0,0" VerticalAlignment="Top" Width="150" FontSize="16" Height="60" Click="ReturnButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="108,173,0,0" TextWrapping="Wrap" Text="Enter serial number/s:" VerticalAlignment="Top" FontSize="16" Foreground="White" Width="120"/>
+        <Label Content="Amout of copies:" HorizontalAlignment="Left" Margin="406,47,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+    </Grid>
+</Page>

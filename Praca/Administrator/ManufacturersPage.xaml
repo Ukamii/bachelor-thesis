@@ -1,0 +1,25 @@
+﻿<Page x:Class="Praca.ManufacturersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praca"
+      mc:Ignorable="d" 
+      d:DesignHeight="560" d:DesignWidth="690"
+      Title="ManufacturersPage" Loaded="PageLoaded">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.452,1.962" StartPoint="1.164,-0.352">
+                <GradientStop Color="#FF202020" Offset="0"/>
+                <GradientStop Color="#FF545454" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <Label Content="Manufacturers:" HorizontalAlignment="Left" Margin="273,10,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <ListBox x:Name="ManufacturersListbox" Margin="189,180,0,0" FontSize="16" Height="250" VerticalAlignment="Top" HorizontalAlignment="Left" Width="320"/>
+        <Button x:Name="EditButton" Content="Edit manufacturer" Margin="273,460,0,0" VerticalAlignment="Top" Height="60" Click="EditButton_Click" FontSize="16" HorizontalAlignment="Left" Width="150"/>
+        <TextBox x:Name="SearchManufacturers" Height="30" Margin="248,125,0,0" TextWrapping="Wrap" Text="Search for manufacturer" VerticalAlignment="Top" FontSize="16" GotFocus="SearchManufacturers_GotFocus" HorizontalAlignment="Left" Width="210"/>
+    </Grid>
+</Page>

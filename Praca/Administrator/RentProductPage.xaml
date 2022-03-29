@@ -1,0 +1,48 @@
+﻿<Page x:Class="Praca.RentProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praca"
+      mc:Ignorable="d" 
+      d:DesignHeight="560" d:DesignWidth="690"
+      Title="RentProductPage" Loaded="PageLoaded">
+
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.452,1.962" StartPoint="1.164,-0.352">
+                <GradientStop Color="#FF202020" Offset="0"/>
+                <GradientStop Color="#FF545454" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <Label Content="User:" HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <ListBox x:Name="UserList" HorizontalAlignment="Left" Height="250" Margin="20,101,0,0" VerticalAlignment="Top" Width="270" FontSize="16" Background="#FF0082E1"/>
+        <Label Content="Product:" HorizontalAlignment="Left" Margin="404,16,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <ComboBox x:Name="CategoryList" HorizontalAlignment="Left" Margin="561,52,0,0" VerticalAlignment="Top" Width="119" SelectionChanged="CategoryList_SelectionChanged" FontSize="16" Style="{DynamicResource ComboBoxStyle1}" Foreground="White" Height="30">
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="#FF0082E1"/>
+                    <Setter Property="BorderBrush" Value="#FF0082E1"/>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+        <ListBox x:Name="ProductList" HorizontalAlignment="Left" Height="250" Margin="410,101,0,0" VerticalAlignment="Top" Width="270" FontSize="16" Background="#FF0082E1"/>
+        <Button x:Name="RentButton" Content="Rent" HorizontalAlignment="Left" Margin="530,490,0,0" VerticalAlignment="Top" Width="150" Height="60" Click="RentButton_Click" FontSize="16" Background="#FF0082E1"/>
+        <ComboBox x:Name="ReturnDatePick" HorizontalAlignment="Left" Margin="22,448,0,0" VerticalAlignment="Top" Width="122" Height="30" SelectionChanged="DateList_SelectionChanged" FontSize="16" Style="{DynamicResource ComboBoxStyle1}" Foreground="White">
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="#FF0082E1"/>
+                    <Setter Property="BorderBrush" Value="#FF0082E1"/>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+        <DatePicker x:Name="ReturnDateOther" HorizontalAlignment="Left" Margin="230,448,0,0" VerticalAlignment="Top" Height="30" Width="133" SelectedDateChanged="OtherDateChanged" FontSize="16"/>
+        <TextBlock x:Name="DateText" HorizontalAlignment="Left" Margin="22,406,0,0" TextWrapping="Wrap" Text="Choose for how long you want to rent this product:" VerticalAlignment="Top" Height="37" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="SearchUsers" HorizontalAlignment="Left" Height="30" Margin="20,52,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="136" FontSize="16" GotFocus="SearchUsers_GotFocus" Background="#FF0082E1"/>
+        <TextBox x:Name="SearchProduct" HorizontalAlignment="Left" Height="30" Margin="410,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" FontSize="16" Text="Search" GotFocus="SearchProduct_GotFocus" Background="#FF0082E1"/>
+
+    </Grid>
+</Page>
